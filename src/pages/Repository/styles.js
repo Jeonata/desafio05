@@ -100,4 +100,72 @@ export const IssueList = styled.ul`
   }
 `;
 
-export const IssueFilter = styled.div``;
+export const IssueFilter = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 15px;
+
+  button {
+    background: #7159c1;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px 10px 10px;
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+    border: 1px solid #7159c1;
+
+    &:hover {
+      background-color: #fff;
+      color: #7159c1;
+    }
+
+    &:nth-child(${props => props.active + 1}) {
+      background: #7159c1;
+      color: #fff;
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+`;
+export const Pagination = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 15px;
+
+  button {
+    background: #7159c1;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+    border: 1px solid #7159c1;
+
+    &:hover {
+      background-color: #fff;
+      color: #7159c1;
+    }
+
+    &:disabled {
+      background: #7159c1;
+      color: #fff;
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 16px;
+  }
+`;
